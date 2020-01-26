@@ -17,7 +17,6 @@ public:
 private:
     int zycie;
     string imie;
-
 };
 
 #endif // CZLOWIEK_H

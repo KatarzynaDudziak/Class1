@@ -7,7 +7,6 @@ Czlowiek::Czlowiek(string p_imie)
 {
     zycie = 100;
     imie = p_imie;
-
 }
 
 void Czlowiek::uderz(int hp)
