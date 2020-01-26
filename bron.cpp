@@ -14,11 +14,11 @@ void Bron::strzal()
     if (amunicja > 0)
     {
         amunicja --;
-        cout << "Strzal !! Pif - Paf!!" << endl;
+        cout << " Strzala !! Pif - Paf!!" << endl;
     }
     else
     {
-        cout << "Brak amunicji" << endl;
+        cout << " Brak amunicji" << endl;
     }
 }
 

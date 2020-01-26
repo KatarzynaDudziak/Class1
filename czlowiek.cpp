@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Czlowiek::Czlowiek(string p_imie)
+Czlowiek::Czlowiek(string p_imie, Bron p_bron) : bron(p_bron)
 {
     zycie = 100;
     imie = p_imie;
@@ -74,5 +74,11 @@ bool Czlowiek::czyZyje()
     }
     return true;
     // return zycie <= 0;
+}
+
+void Czlowiek::atakuj()
+{
+    cout << imie;
+    bron.strzal();
 }
 

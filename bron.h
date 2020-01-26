@@ -15,8 +15,6 @@ private:
     string nazwa;
     int moc;
     int amunicja;
-
-
 };
 
 #endif // BRON_H
