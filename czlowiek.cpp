@@ -34,6 +34,7 @@ void Czlowiek::ulecz()
     if (czyZyje() == true)
     {
        zycie = 100;
+       //test
     }
     else
     {
