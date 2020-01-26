@@ -46,7 +46,20 @@ void Czlowiek::wyswietlIleZycia()
 {
     if (czyZyje() == true)
     {
-        cout << imie << " ma zycia = " << ileZycia() << endl;
+        string pasekZycia = "[";
+        for (int i = 0; i < 100; i += 10)
+        {
+            if (i < zycie)
+            {
+                pasekZycia += "I";
+            }
+            else
+            {
+                pasekZycia += " ";
+            }
+        }
+        pasekZycia += "]";
+        cout << imie << " ma zycia = " << ileZycia() << " " << pasekZycia << endl;
     }
     else
     {
