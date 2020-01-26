@@ -26,7 +26,7 @@ void Czlowiek::uderz(int hp)
 
 int Czlowiek::ileZycia()
 {
-    return zycie; // test
+    return zycie;
 }
 
 void Czlowiek::ulecz()
