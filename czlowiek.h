@@ -15,7 +15,8 @@ public:
     void ulecz();
     void wyswietlIleZycia();
     bool czyZyje();
-    void atakuj();
+    void atakuj(Czlowiek p_cel);
+    string wyciagnijImie();
 private:
     int zycie;
     string imie;

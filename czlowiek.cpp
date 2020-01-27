@@ -76,9 +76,17 @@ bool Czlowiek::czyZyje()
     // return zycie <= 0;
 }
 
-void Czlowiek::atakuj()
+void Czlowiek::atakuj(Czlowiek p_cel)
 {
     cout << imie;
     bron.strzal();
+    cout<< "Strzelam do "<< p_cel.wyciagnijImie() << endl;
+
 }
+
+string Czlowiek::wyciagnijImie()
+{
+    return imie;
+}
+
 

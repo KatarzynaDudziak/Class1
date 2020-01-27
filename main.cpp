@@ -10,12 +10,12 @@ int main()
     Bron pistolet("pistolet");
     Czlowiek kasia("kasia", pistolet);
     Czlowiek tomek("tomek", pistolet);
+    Czlowiek boleslaw("bolek", pistolet);
 
-
-    for (int i = 0; i < 12; i++)
+    for (int i = 0; i < 5; i++)
     {
-        kasia.atakuj();
-        tomek.atakuj();
+        kasia.atakuj(boleslaw);
+        tomek.atakuj(kasia);
         Sleep(1000);
     }
     return 0;
