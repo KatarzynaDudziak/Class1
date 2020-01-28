@@ -1,26 +1,26 @@
-#ifndef CZLOWIEK_H
-#define CZLOWIEK_H
+#ifndef Human_H
+#define Human_H
 #include <string>
-#include <bron.h>
+#include <arms.h>
 
 using namespace std;
 
-class Czlowiek
+class Human
 {
 public:
-    Czlowiek(string p_imie, Bron p_bron);
+    Human(string p_name, Arms p_arms);
 
-    void uderz(int hp);
-    int ileZycia();
-    void ulecz();
-    void wyswietlIleZycia();
-    bool czyZyje();
-    void atakuj(Czlowiek p_cel);
-    string wyciagnijImie();
+    void reduceLife(int hp);
+    int howMuchLife();
+    void heal();
+    void showHowMuchLife();
+    bool isAlive();
+    void attack(Human p_target);
+    string pullName();
 private:
-    int zycie;
-    string imie;
-    Bron bron;
+    int life;
+    string name;
+    Arms arms;
 };
 
-#endif // CZLOWIEK_H
+#endif // HUMAN_H

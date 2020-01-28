@@ -1,20 +1,20 @@
-#ifndef BRON_H
-#define BRON_H
+#ifndef ARMS_H
+#define ARMS_H
 #include <string>
 #include <iostream>
 
 using namespace std;
 
-class Bron
+class Arms
 {
 public:
-    Bron(string p_nazwa);
-    void strzal();
-    void wyswietlAmunicje();
+    Arms(string p_name);
+    void shot();
+    void showAmmunition();
 private:
-    string nazwa;
-    int moc;
-    int amunicja;
+    string name;
+    int power;
+    int ammunition;
 };
 
-#endif // BRON_H
+#endif // ARMS_H

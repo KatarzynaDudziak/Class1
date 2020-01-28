@@ -1,19 +1,19 @@
-#include "bron.h"
+#include "arms.h"
 
 using namespace std;
 
-Bron::Bron(string p_nazwa)
+Arms::Arms(string p_name)
 {
-    nazwa = p_nazwa;
-    amunicja = 10;
-    moc = 5;
+    name = p_name;
+    ammunition = 10;
+    power = 5;
 }
 
-void Bron::strzal()
+void Arms::shot()
 {
-    if (amunicja > 0)
+    if (ammunition > 0)
     {
-        amunicja --;
+        ammunition --;
         cout << " Strzela !! Pif - Paf!! ";
     }
     else
@@ -22,15 +22,15 @@ void Bron::strzal()
     }
 }
 
-void Bron::wyswietlAmunicje()
+void Arms::showAmmunition()
 {
-    if (amunicja <= 0)
+    if (ammunition <= 0)
     {
         cout << "Skonczyla mi sie amunicja" << endl;
     }
     else
     {
-        cout << "Mam " << amunicja << " amunicji" << endl;
+        cout << "Mam " << ammunition << " amunicji" << endl;
     }
 }
 

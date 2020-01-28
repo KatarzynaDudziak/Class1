@@ -1,21 +1,21 @@
-#include "bron.h"
+#include "arms.h"
 #include <iostream>
-#include <czlowiek.h>
+#include <human.h>
 #include <windows.h>
 
 using namespace std;
 
 int main()
 {
-    Bron pistolet("pistolet");
-    Czlowiek kasia("kasia", pistolet);
-    Czlowiek tomek("tomek", pistolet);
-    Czlowiek boleslaw("bolek", pistolet);
+    Arms pistolet("pistolet");
+    Human kasia("kasia", pistolet);
+    Human tomek("tomek", pistolet);
+    Human boleslaw("bolek", pistolet);
 
     for (int i = 0; i < 5; i++)
     {
-        kasia.atakuj(boleslaw);
-        tomek.atakuj(kasia);
+        kasia.attack(boleslaw);
+        tomek.attack(kasia);
         Sleep(1000);
     }
     return 0;

@@ -4,10 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        bron.cpp \
-        czlowiek.cpp \
+        arms.cpp \
+        human.cpp \
         main.cpp
 
 HEADERS += \
-    bron.h \
-    czlowiek.h
+    arms.h \
+    human.h

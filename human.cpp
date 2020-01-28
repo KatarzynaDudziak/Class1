@@ -1,92 +1,89 @@
-#include "czlowiek.h"
+#include "human.h"
 #include <iostream>
 
 using namespace std;
 
-Czlowiek::Czlowiek(string p_imie, Bron p_bron) : bron(p_bron)
+Human::Human(string p_name, Arms p_arms) : arms(p_arms)
 {
-    zycie = 100;
-    imie = p_imie;
+    life = 100;
+    name = p_name;
 }
 
-void Czlowiek::uderz(int hp)
+void Human::reduceLife(int hp)
 {
-   if (czyZyje() == false)
+   if (isAlive() == false)
    {
-       cout << " Nie moge uderzyc " << imie << " bo nie zyje!!" << endl;
+       cout << " Nie moge uderzyc " << name << " bo nie zyje!!" << endl;
        return;
    }
-   zycie -= hp;
-   if (czyZyje() == false)
+   life -= hp;
+   if (isAlive() == false)
    {
-       cout << imie << " Umiera" << endl;
+       cout << name << " Umiera" << endl;
    }
 }
 
-int Czlowiek::ileZycia()
+int Human::howMuchLife()
 {
-    return zycie;
+    return life;
 }
 
-void Czlowiek::ulecz()
+void Human::heal()
 {
-    if (czyZyje() == true)
+    if (isAlive() == true)
     {
-       zycie = 100;
+       life = 100;
        //test
     }
     else
     {
-        cout << imie << " Nie zyje i nie moge go uleczyc" << endl;
+        cout << name << " Nie zyje i nie moge go uleczyc" << endl;
     }
 }
 
-void Czlowiek::wyswietlIleZycia()
+void Human::showHowMuchLife()
 {
-    if (czyZyje() == true)
+    if (isAlive() == true)
     {
-        string pasekZycia = "[";
+        string lifeBar = "[";
         for (int i = 0; i < 100; i += 10)
         {
-            if (i < zycie)
+            if (i < life)
             {
-                pasekZycia += "I";
+                lifeBar += "I";
             }
             else
             {
-                pasekZycia += " ";
+                lifeBar += " ";
             }
         }
-        pasekZycia += "]";
-        cout << imie << " ma zycia = " << ileZycia() << " " << pasekZycia << endl;
+        lifeBar += "]";
+        cout << name << " ma zycia = " << howMuchLife() << " " << lifeBar << endl;
     }
     else
     {
-        cout << imie << " Nie zyje" << endl;
+        cout << name << " Nie zyje" << endl;
     }
 }
 
-bool Czlowiek::czyZyje()
+bool Human::isAlive()
 {
-    if (zycie <= 0)
+    if (life <= 0)
     {
         return false;
     }
     return true;
-    // return zycie <= 0;
+    // return life <= 0;
 }
 
-void Czlowiek::atakuj(Czlowiek p_cel)
+void Human::attack(Human p_target)
 {
-    cout << imie;
-    bron.strzal();
-    cout<< "Strzelam do "<< p_cel.wyciagnijImie() << endl;
-
+    cout << name;
+    arms.shot();
+    cout<< "Strzelam do "<< p_target.pullName() << endl;
 }
 
-string Czlowiek::wyciagnijImie()
+string Human::pullName()
 {
-    return imie;
+    return name;
 }
-
-
