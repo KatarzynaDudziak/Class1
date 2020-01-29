@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Human::Human(string p_name, Arms p_arms) : arms(p_arms)
+Human::Human(string p_name, Weapon p_weapon) : arms(p_weapon)
 {
     life = 100;
     name = p_name;
@@ -79,11 +79,11 @@ bool Human::isAlive()
 void Human::attack(Human p_target)
 {
     cout << name;
-    arms.shot();
+    weapon.shot();
     cout<< "Strzelam do "<< p_target.pullName() << endl;
 }
 
-string Human::pullName()
+string Human::getName()
 {
     return name;
 }

@@ -1,14 +1,14 @@
-#ifndef ARMS_H
-#define ARMS_H
+#ifndef WEAPON_H
+#define WEAPON_H
 #include <string>
 #include <iostream>
 
 using namespace std;
 
-class Arms
+class Weapon
 {
 public:
-    Arms(string p_name);
+    Weapon(string p_name);
     void shot();
     void showAmmunition();
 private:
@@ -17,4 +17,4 @@ private:
     int ammunition;
 };
 
-#endif // ARMS_H
+#endif // WEAPON_H

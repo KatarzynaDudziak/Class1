@@ -4,10 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        arms.cpp \
         human.cpp \
-        main.cpp
+        main.cpp \
+        weapon.cpp
 
 HEADERS += \
-    arms.h \
-    human.h
+    human.h \
+    weapon.h
