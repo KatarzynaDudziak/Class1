@@ -1,7 +1,7 @@
 #ifndef Human_H
 #define Human_H
 #include <string>
-#include "weapon.h"
+#include <weapon.h>
 
 using namespace std;
 

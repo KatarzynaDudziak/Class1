@@ -1,24 +1,25 @@
-#include "weapon.h"
+#include <weapon.h>
 
 using namespace std;
 
-Weapon::Weapon(string p_name)
+Weapon::Weapon(string p_name, int p_ammunition, int p_power)
 {
     name = p_name;
-    ammunition = 10;
-    power = 5;
+    ammunition = p_ammunition;
+    power = p_power;
 }
 
-void Weapon::shot()
+bool Weapon::shot()
 {
     if (ammunition > 0)
     {
         ammunition --;
         cout << " Strzela !! Pif - Paf!! ";
+        return true;
     }
     else
     {
-        cout << " Brak amunicji" << endl;
+        return false;
     }
 }
 
@@ -32,4 +33,9 @@ void Weapon::printAmmunition()
     {
         cout << "Mam " << ammunition << " amunicji" << endl;
     }
+}
+
+int Weapon::getPower()
+{
+    return power;
 }

@@ -8,9 +8,10 @@ using namespace std;
 class Weapon
 {
 public:
-    Weapon(string p_name);
-    void shot();
+    Weapon(string p_name, int p_ammunition, int p_power);
+    bool shot();
     void printAmmunition();
+    int getPower();
 private:
     string name;
     int power;

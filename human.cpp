@@ -1,4 +1,4 @@
-#include "human.h"
+#include <human.h>
 #include <iostream>
 
 using namespace std;
@@ -11,16 +11,16 @@ Human::Human(string p_name, Weapon p_weapon) : weapon(p_weapon)
 
 void Human::makeDamage(int hp)
 {
-   if (isAlive() == false)
-   {
-       cout << " Nie moge uderzyc " << name << " bo nie zyje!!" << endl;
-       return;
-   }
-   life -= hp;
-   if (isAlive() == false)
-   {
-       cout << name << " Umiera" << endl;
-   }
+    if (isAlive() == false)
+    {
+        cout << " Nie moge uderzyc " << name << " bo nie zyje!!" << endl;
+        return;
+    }
+    life -= hp;
+    if (isAlive() == false)
+    {
+        cout << name << " Umiera" << endl;
+    }
 }
 
 int Human::howMuchLife()
@@ -32,8 +32,9 @@ void Human::heal()
 {
     if (isAlive() == true)
     {
-       life = 100;
-       //test
+        life = 100;
+        cout << name << " leczy sie" << endl;
+
     }
     else
     {
@@ -83,9 +84,15 @@ void Human::attack(Human &p_target)
         return;
     }
     cout << name;
-    weapon.shot();
-    cout<< "Strzelam do "<< p_target.getName() << endl;
-    p_target.makeDamage(30);
+    if (weapon.shot() == true)
+    {
+        cout << " Strzelam do "<< p_target.getName() << endl;
+        p_target.makeDamage(weapon.getPower());
+    }
+    else
+    {
+        cout << " Brak amunicji" << endl;
+    }
 }
 
 string Human::getName()
