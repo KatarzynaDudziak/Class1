@@ -3,13 +3,13 @@
 
 using namespace std;
 
-Human::Human(string p_name, Weapon p_weapon) : arms(p_weapon)
+Human::Human(string p_name, Weapon p_weapon) : weapon(p_weapon)
 {
     life = 100;
     name = p_name;
 }
 
-void Human::reduceLife(int hp)
+void Human::makeDamage(int hp)
 {
    if (isAlive() == false)
    {
@@ -41,7 +41,7 @@ void Human::heal()
     }
 }
 
-void Human::showHowMuchLife()
+void Human::printHowMuchLife()
 {
     if (isAlive() == true)
     {
@@ -76,11 +76,16 @@ bool Human::isAlive()
     // return life <= 0;
 }
 
-void Human::attack(Human p_target)
+void Human::attack(Human &p_target)
 {
+    if (isAlive() == false)
+    {
+        return;
+    }
     cout << name;
     weapon.shot();
-    cout<< "Strzelam do "<< p_target.pullName() << endl;
+    cout<< "Strzelam do "<< p_target.getName() << endl;
+    p_target.makeDamage(30);
 }
 
 string Human::getName()

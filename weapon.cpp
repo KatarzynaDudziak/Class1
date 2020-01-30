@@ -1,15 +1,15 @@
-#include "arms.h"
+#include "weapon.h"
 
 using namespace std;
 
-Arms::Arms(string p_name)
+Weapon::Weapon(string p_name)
 {
     name = p_name;
     ammunition = 10;
     power = 5;
 }
 
-void Arms::shot()
+void Weapon::shot()
 {
     if (ammunition > 0)
     {
@@ -22,7 +22,7 @@ void Arms::shot()
     }
 }
 
-void Arms::showAmmunition()
+void Weapon::printAmmunition()
 {
     if (ammunition <= 0)
     {
@@ -33,4 +33,3 @@ void Arms::showAmmunition()
         cout << "Mam " << ammunition << " amunicji" << endl;
     }
 }
-

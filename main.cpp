@@ -14,6 +14,7 @@ int main()
 
     for (int i = 0; i < 5; i++)
     {
+        kasia.printHowMuchLife();
         kasia.attack(boleslaw);
         tomek.attack(kasia);
         Sleep(1000);

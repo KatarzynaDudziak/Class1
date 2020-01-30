@@ -10,7 +10,7 @@ class Weapon
 public:
     Weapon(string p_name);
     void shot();
-    void showAmmunition();
+    void printAmmunition();
 private:
     string name;
     int power;
